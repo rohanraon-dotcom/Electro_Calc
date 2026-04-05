@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cut-off</title>
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+    <header><h1>ElectroCalc</h1></header>
+</head>
+<body>
+    <div id="cutoffheading"><h1>Cut-off Frequency</h1></div>
+    <div id="cutoff_formula">
+        <h2>f = 1 / (2πRC)</h2>
+        <h3> Enter value for R (in ohms):
+        <input type="number" id="R" placeholder="enter a value"></h3>
+        <h3>Enter value of C (in farad):
+            <input type="number" id="C" placeholder="enter a value"></h3>     
+
+<button onclick="calculate()">Calculate</button>
+<h3>Cut-off frequency (in Hz): <span id="result">0</span></h3>
+    </div>
+    <script>
+function calculate() {
+    let R = document.getElementById("R").value;
+    let C = document.getElementById("C").value;
+
+    if (R === "" || C === "") {
+        alert("Enter all values");
+        return;
+    }
+
+    let f = 1 / (2 * Math.PI * R * C);
+
+    document.getElementById("result").innerText = f.toFixed(2);
+}
+</script>
+</body>
+</html>

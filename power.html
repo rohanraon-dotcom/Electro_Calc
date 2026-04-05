@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>power</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+    <header><h1>ElectroCalc</h1></header>
+</head>
+<body>
+    <div id="powerheading"><h1>Power</h1></div>
+    <div id="powerformula">
+        <h2>P = V x I </h2>
+        <h3>Enter value for V (in volts): <input type="number" id="V2" placeholder="enter a value"></h3>
+        <h3>Enter value for I (in mA): <input type="number" id="I2" placeholder="enter a value"></h3>
+        <button onclick="calcP1()">Calculate</button>
+         <h3>Power in (Watt): <span id="result2">0</span></h3>
+    </div>
+ <script>
+function calcP1() {
+    let V2 = document.getElementById("V2").value;
+    let I2 = document.getElementById("I2").value;
+    if (V2 === "" || I2 === "") {
+        alert("Enter all values");
+        return;
+    }
+    let P1 = V2 * I2;
+    document.getElementById("result2").innerText = P1.toFixed(2);
+}
+</script>
+
+
+<br>
+    <div id="powerformula1">
+        <h2> P = I² * R</h2>
+        <h3>Enter value for I (in mA):<input type="number" id="I21" placeholder="enter a value"></h3>
+        <h3> Enter value for R (in ohms):<input type="number" id="R2" placeholder="enter a value"></h3>
+        <button onclick="calcP2()">Calculate</button>
+         <h3>Power in (Watt):<span id="result21">0</span></h3>
+    </div>
+     <script>
+function calcP2() {
+    let I21 = document.getElementById("I21").value;
+    let R2 = document.getElementById("R2").value;
+    if (I21 === "" || R2 === "") {
+        alert("Enter all values");
+        return;
+    }
+    let P2 = Math.pow(I21,2) * R2;
+    document.getElementById("result21").innerText = P2.toFixed(2);
+}
+</script>
+</body>
+</html>

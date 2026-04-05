@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohms-law</title>
+<link rel="stylesheet" href="ohmslaw.html">
+<link rel="stylesheet" href="style.css">
+</head>
+ <header><h1>ElectroCalc</h1></header>
+<body>
+    <div id="ohmsheading">
+    <h1>Ohm's Law</h1></div>
+
+      <div id="ohmslawformula1">
+        <h2>V = IR</h2>
+        <h3>Enter value for I (in mA):<input type="number" id="I1" placeholder="enter a value"></h3>
+        <h3> Enter value for R (in ohms): <input type="number" id="R1" placeholder="enter a value"></h3>
+        <button onclick="calcV()">Calculate</button>
+         <h3>Voltage V (in volts): <span id="result1">0</span></h3>
+     </div>
+     
+<script>
+function calcV() {
+    let I1 = document.getElementById("I1").value;
+    let R1 = document.getElementById("R1").value;
+    if (I1 === "" || R1 === "") {
+        alert("Enter all values");
+        return;
+    }
+    let V = I1 * R1;
+    document.getElementById("result1").innerText = V.toFixed(2);
+}
+</script>
+<br>
+    <div id="ohmslawformula2">
+        <h2>I = V/R </h2>
+        <h3>Enter value for V (in volts):<input type="number" id="V1" placeholder="enter a value"></h3>
+        <h3> Enter value for R (in ohms):<input type="number" id="R12" placeholder="enter a value"></h3>
+         <button onclick="calcI()">Calculate</button>
+        <h3>Current I (in mA):<span id="result12">0</span></h3>
+    </div>
+
+         
+<script>
+function calcI() {
+    let V1 = document.getElementById("V1").value;
+    let R12 = document.getElementById("R12").value;
+    if (V1 === "" || R12 === "") {
+        alert("Enter all values");
+        return;
+    }
+    let I = V1 / R12;
+    document.getElementById("result12").innerText = I.toFixed(2);
+}
+</script>
+         
+<br>
+
+        <div id="ohmslawformula3">
+        <h2>R = V/I</h2>
+        <h3>Enter value for V (in volts): <input type="number" id="V12" placeholder="enter a value"></h3>
+        <h3>Enter value for I (in mA): <input type="number" id="I12" placeholder="enter a value"></h3>
+        <button onclick="calcR()">Calculate</button>
+         <h3>Resistance R (in ohms): <span id="result13">0</span>
+    </div>
+ <script>
+function calcR() {
+    let V12 = document.getElementById("V12").value;
+    let I12 = document.getElementById("I12").value;
+    if (V12 === "" || I12 === "") {
+        alert("Enter all values");
+        return;
+    }
+    let R = V12 / I12;
+    document.getElementById("result13").innerText = R.toFixed(2);
+}
+</script>
+</body>
+</html>

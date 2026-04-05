@@ -1,0 +1,83 @@
+body{
+  background-color: rgb(176, 229, 255);
+  align-items: center;
+}
+a{text-decoration: none;}
+header{
+  box-shadow: 20%;
+  color: floralwhite;text-align: center;
+  justify-content: center;background-color: rgb(68, 68, 141);display: flex;
+}
+.formulas{
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.list{
+  text-align: center;
+  width: auto;
+}
+#ohmslaw{
+  align-items: center;display: flex;justify-content: space-between;
+height: 3vh;padding: 5vh;border-radius: 8%;
+  margin-bottom: 10px;font-size:x-large;background-color: rgb(54, 192, 213);
+}
+#power{
+  align-items: center;display: flex;justify-content: space-between; 
+   height: 3vh;padding: 5vh;border-radius: 8%;
+   margin-bottom: 10px;
+   font-size:x-large;background-color: rgb(54, 192, 213);
+}
+#cutoff{
+  height: 3vh;padding: 5vh;border-radius: 8%;
+  margin-bottom: 10px; align-items: center;display: flex;
+  justify-content: space-between;
+   font-size:x-large;background-color: rgb(54, 192, 213);
+}
+#binaryconverter{
+   align-items: center;display: flex;justify-content: space-between;
+   height: 3vh;padding:5vh; border-radius: 8%;
+  margin-bottom: 10px;font-size:x-large; background-color: rgb(54, 192, 213);
+}
+#voltagedivider{
+   align-items: center;display: flex;justify-content: space-between;
+ height: 3vh;padding: 5vh;
+ border-radius: 8%;font-size:x-large;background-color: rgb(54, 192, 213);
+}
+#ohmsheading{text-align: center;}
+#powerheading{text-align: center;}
+#cutoffheading{text-align: center;}
+#binaryheading{text-align: center;}
+#voltageheading{text-align: center;}
+
+#cutoff_formula{
+text-align: center;background-color: rgb(47, 249, 249);
+padding: 3vh;margin-left: 20%;margin-right:20%;
+}
+#powerformula{
+ text-align: center;background-color: rgb(47, 249, 249);
+padding: 1vh;margin-left: 20%;margin-right:20%;
+}
+#powerformula1{
+ text-align: center;background-color: rgb(47, 249, 249);
+padding: 1vh;margin-left: 20%;margin-right:20%;
+}
+#ohmslawformula1{
+ text-align: center;background-color: rgb(47, 249, 249);
+padding: 1vh;margin-left: 20%;margin-right:20%;
+}
+#ohmslawformula2{
+ text-align: center;background-color: rgb(47, 249, 249);
+padding: 1vh;margin-left: 20%;margin-right:20%;
+}
+#ohmslawformula3{
+ text-align: center;background-color: rgb(47, 249, 249);
+padding: 1vh;margin-left: 20%;margin-right:20%;
+}
+#converterformula{
+ text-align: center;background-color: rgb(47, 249, 249);
+padding: 1vh;margin-left: 20%;margin-right:20%;
+}
+#dividerformula{
+   text-align: center;background-color: rgb(47, 249, 249);
+padding: 1vh;margin-left: 20%;margin-right:20%;
+}

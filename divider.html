@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>divider</title>
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+    <header><h1>ElectroCalc</h1></header>
+</head>
+<body>
+    <div id="voltageheading"><h1>Voltage divider</h1></div>
+    <div id="dividerformula">
+        <h2>Vout = Vin × (R2 / (R1 + R2))</h2>
+        <h3>Enter value for Vin (in volts):<input type="number" id="V5" placeholder="enter a value"></h3>
+        <h3>Enter value for R1 (in ohms):<input type="number" id="R5" placeholder="enter a value"></h3>
+        <h3> Entervalue for R2 (in ohms):<input type="number" id="R51" placeholder="enter a value"></h3>
+         <button onclick="calcDivider()">Calculate</button>
+      <h3>Vout in (volts): <span id="result5">0</span></h3>
+    </div>
+      <script>
+function calcDivider() {
+    let V5 = parseFloat(document.getElementById("V5").value);
+    let R5 = parseFloat(document.getElementById("R5").value);
+    let R51 = parseFloat(document.getElementById("R51").value);
+
+    if (isNaN(V5) || isNaN(R5) || isNaN(R51)) {
+        alert("Enter all values");
+        return;
+    }
+
+    if ((R5 + R51) === 0) {
+        alert("Invalid resistance values");
+        return;
+    }
+
+    let result5 = V5 * (R51 / (R5 + R51));
+
+    document.getElementById("result5").innerText = result5.toFixed(2);
+}
+</script>
+</body>
+</html>

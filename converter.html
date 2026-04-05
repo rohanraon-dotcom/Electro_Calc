@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bin-conv</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+</head>
+ <header><h1>ElectroCalc</h1></header>
+<body>
+    <div id="binaryheading"><h1>Binary Converter</h1></div>
+        <div id="converterformula">
+        <h2>Decimal = Σ (bit * 2ⁿ)</h2>
+        <h3>Enter the binary number:<input type="number" id="binary" placeholder="enter a value"></h3>
+        <button onclick="convert()">Calculate</button>
+        <h3>Decimal: <span id="result4">0</span> </h3>
+    </div>
+
+    <script>
+function convert() {
+    let binary = document.getElementById("binary").value;
+
+    let parts = binary.split(".");
+
+    let intPart = parseInt(parts[0], 2);
+    let fracPart = 0;
+
+    if (parts[1]) {
+        for (let i = 0; i < parts[1].length; i++) {
+            fracPart += Number(parts[1][i]) * Math.pow(2, -(i + 1));
+        }
+    }
+
+    let result4 = intPart + fracPart;
+
+    document.getElementById("result4").innerText = result4.toFixed(4);
+}
+</script>
+
+</body>
+</html>
